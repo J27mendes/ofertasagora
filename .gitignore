@@ -1,0 +1,36 @@
+Para proteger o seu código e garantir que você não envie informações sensíveis (como suas credenciais da Amazon ou arquivos temporários do Python) para o GitHub, o arquivo .gitignore é essencial.
+
+Como você está usando Python e Django, aqui está o que deve constar no seu arquivo .gitignore (crie um arquivo chamado exatamente .gitignore na pasta raiz C:\dev\money\).
+
+Conteúdo essencial para o seu .gitignore
+Plaintext
+
+# Ambientes Virtuais (Não envie a pasta venv!)
+venv/
+env/
+ENV/
+
+# Arquivos de Cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Banco de Dados (Para não enviar o seu banco local com testes)
+*.sqlite3
+
+# Configurações do Django (Arquivos sensíveis)
+db.sqlite3
+.env
+local_settings.py
+
+# Arquivos do VS Code ou Editores
+.vscode/
+.idea/
+
+# Arquivos de Sistema
+Thumbs.db
+.DS_Store
+
+# Pasta de arquivos de mídia (uploads de usuários)
+media/
+static_root/
